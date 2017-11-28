@@ -1,0 +1,9 @@
+{
+  "name": "presentation-ideas-that-shaped-functional-programming",
+  "version": "0.0.0",
+  "dependencies": {
+    "prism": "gh-pages",
+    "font-awesome": "~4.2.0",
+    "fira": "mozilla/Fira"
+  }
+}
