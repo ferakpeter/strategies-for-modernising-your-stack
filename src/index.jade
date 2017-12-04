@@ -36,6 +36,10 @@ html
       background: black url('images/cloudy.jpg') no-repeat;
     }
 
+    .lordoftherings {
+      background: black url('images/lordoftherings.jpg') no-repeat;
+    }
+
   body
 
     article
@@ -92,29 +96,37 @@ html
       //-- BUT it doesn't tell us about how to choose the right stack
 
       section
+        img.img--small(src='images/scurve.jpg')
+        p
+          a(href='https://en.wikipedia.org/wiki/The_Innovator%27s_Dilemma') Innovator's Dilemna
+
+      section
         h2 Finding a sustainable balance for a company?
         ul
-          li Inspect and Adapt is not often used the tech stack
-          li Until it is too late
-          li Rewrites are hard to integrate in a big system
+          li Paradigm shifts can go under the radar
+          li Decision can be too late
+          li Long running rewrites
 
       section
         h2 Who do we turn to in those situations?
 
       section.dark(data-bespoke-backdrop='guru')
-        h2 A tech leader can make the decision
-        p A guru can be hard to replace
+        h2 Internal or external tech
+        p Biased, and might create a bottle-neck
 
       section.dark(data-bespoke-backdrop='cloudy')
-        h2 There can be unclarity about who should take the decision
-        p Too much diversity in the stack can become unmaintainable
+        h2 There might be unclarity about who can take a big decision
+        p Too much diversity can lead to chaos
 
       section.dark(data-bespoke-backdrop='deadline')
         h2 The sales team can inflence the decision
         p A deadline can force an optimization for short term benefit
 
       section
-        h2 By the time a decision is made a rewrite of a part of the system may be necessary
+        h2 By the time a decision is made the system may be at the limit
+
+      section.dark(data-bespoke-backdrop='lordoftherings')
+        h2 Getting relevant information from the right people, on time, will lead to a better decision
 
       section.dark
         h1 Incremental adaption of new technologies
@@ -149,10 +161,36 @@ html
           li Plan this into the regular delivery cycle
 
       section
+        h2 Management focus on communication
+        ul
+          li Engineers have a different focus
+          li Engineers usually think about improving "their" part
+          li It takes skills that are not "core" skill
+          li It may not happen "naturally"
+
+      section
+        h2 This way big decision can be built on small, proven, decisions
+
+      section.dark
         h1 Creating a strategy
 
       section
-        h2 S-curve
+        img.img--small(src='images/scurve.jpg')
+        p
+          a(href='https://en.wikipedia.org/wiki/The_Innovator%27s_Dilemma') Innovator's Dilemna
+
+      section
+        img.img--med(src='images/tech-radar-languages.jpg')
+        p
+          a(href='https://assets.thoughtworks.com/assets/technology-radar-vol-17-en.pdf') Thoughtworks Technology Radar
+
+      section
+        img.img--med(src='images/tech-radar-platforms.jpg')
+        p
+          a(href='https://assets.thoughtworks.com/assets/technology-radar-vol-17-en.pdf') Thoughtworks Technology Radar
+
+      section
+        h2 It's necessary to understand how fast things are approaching
 
       section
         h2 Agile
@@ -162,7 +200,7 @@ html
           li Development
 
       section
-        h2 Tech strategy Pillars
+        h2 Tech Strategy Pillars
         ul
           li Product
           li Scale
@@ -176,15 +214,19 @@ html
 
       section
         h2 Scale
-        p FB vs. Bwin
+        p Bwin vs. Facebook
 
       section
         h2 Technical process
-        p "Blind coding" vs. continous delivery
+        p "Blind coding" vs. Continous Delivery
 
       section
         h2 Skills
-        p What do poeple know and what do they want to know
+        p Knowing what the business needs vs. Knowing what people already know
+
+      section
+        h2 Mass
+        p Hiring/Location strategy vs. Educational strategy (talent pipeline)
 
       section
         h2 Graph about % achieved of each pillar
@@ -195,45 +237,171 @@ html
           li Training
           li Recruitment
 
-      section
+      section.dark
         h1 Implementing the Strategy
 
       section
-        table.vis
-          tr
-            td Measure
-            td Product
-            td Scale
-            td Technical process
-            td Skills
-            td Mass
+        h2 Tech Consultants
+        p Product
+        p.highlight Scale
+        p.highlight Technical process
+        p Skills
+        p Mass
 
-          tr
-            td Consultants
-            td
-            td.green
-            td.green
-            td.yellow
-            td
-            td
+      section
+        h2 Team Building
+        p Product
+        p Scale
+        p Technical process
+        p Skills
+        p.highlight Mass
+
+      section
+        h2 Evaluations/Bonuses
+        p Product
+        p Scale
+        p Technical process
+        p.highlight Skills
+        p.highlight Mass
+
+      section
+        h2 Outsourcing
+        p.negative Product
+        p.highlight Scale
+        p Technical process
+        p.negative Skills
+        p.amber Mass
+
+      section
+        h2 Needs   % achieved of each pillar
+        ul
+          li Innovation
+          li Market share
+          li Operation
+          li Training
+          li Recruitment
+
+      section
+        h2 Using the budget for smaller improvements targeted to your needs
+
+      section
+        h2 Experience products of competitors with development teams
+
+      section
+        h2 Internal Meetups
+
+      section
+        h2 Hosting Meetup communities
+
+      section
+        h2 Code Retreats
+        p To define Style Guides, Coding Rules, Tooling
+        p To try things out
+        p To create benchmarks
+
+      section
+        h2 Real Customers using pre-launch software on-site
+
+      section
+        h2 Field work
+        p Direct feedback and implementation
+
+      section
+        h2 Skill watch
+        p Track and visualize skills
+
+      section
+        h2 Use new technology for internal tools
+
+      section
+        h2 Kaggle competition
+
+      section
+        h2 Combine measures for high effect
+
+      section
+        h2 Real Customers + Code Retreats
+        p.highlight Product
+        p.highlight Scale
+        p.amber Technical process
+        p.amber Skills
+        p Mass
+
+      section
+        h2 Field work + Code Retreats + Hosting Meetup
+        p.highlight Product
+        p.highlight Scale
+        p.highlight Technical process
+        p.highlight Skills
+        p.highlight Mass
+
+      section
+        h2 Improved  % achieved of each pillar
+        ul
+          li Innovation
+          li Market share
+          li Operation
+          li Training
+          li Recruitment
 
 
+      section
+        h1 How to get the right suggestions
 
+      secion
+        h2 Involve the right people
 
+      section
+        h2 Product
+        p Marketing, Product, Architects
 
+      section
+        h2 Scale
+        p Architects, Tech teams, Infrastructure
 
+      section
+        h2 Technical process
+        p Agile Coaches, Scrum Masters, Tech teams
 
+      section
+        h2 Skills
+        p Managers, Scrum Masters, Tech teams
 
+      section
+        h2 Mass
+        p Managers, HR, Tech teams
 
+      section
+        h2 Steer the strategy with quality information
 
+      section
+        h2 Track  % achieved of each pillar
+        ul
+          li Innovation
+          li Market share
+          li Operation
+          li Training
+          li Recruitment
+
+      section.dark
+        h1 Summing up
+
+      section
+        h2 Small steps before taking big steps
+
+      section
+        h2 Management needs to facilitate change actively
+
+      section
+        h2 Steer change with relevant information from relevant people
 
 
 
       section
-        h2 Where are the similarities?
+        h2 Music
         ul
-          li Fast paced, constantly changing
-          li Highly dependend on "hardware"
+          li Constantly changing, incrementally
+          li Ideas that influence others
 
       section
         img.img--full(src='images/music-styles.jpg')
@@ -241,9 +409,6 @@ html
       section
         img.img--full(src='images/programming-paradigms.jpg')
         p Peter Van Roy
-
-      section
-        h2 How do we choose the right technology for our team?
 
       section
         h2 Musical evolution
@@ -256,13 +421,7 @@ html
         img.img--med(src='images/electric-guitar.jpg')
 
       section
-        h2 Find the tools to identify Electric Guitars for your business!
-
-
-
-
-
-
+        h2 Find the tools to identify the next big thing for your business!
 
       section
         img.img--top(src='images/codeeurope.svg')
