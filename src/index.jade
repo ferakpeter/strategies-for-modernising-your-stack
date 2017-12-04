@@ -12,16 +12,42 @@ html
       background: white url('images/intro-background.jpg') no-repeat;
     }
 
+    .fastchange {
+      background: white url('images/fastchange.jpg') no-repeat;
+    }
+
+    .dinosaur {
+      background: black url('images/dinosaur.jpg') no-repeat;
+    }
+
+    .policies {
+      background: black url('images/policies.jpg') no-repeat;
+    }
+
+    .guru {
+      background: black url('images/guru.jpg') no-repeat;
+    }
+
+    .deadline {
+      background: black url('images/deadline.jpg') no-repeat;
+    }
+
+    .cloudy {
+      background: black url('images/cloudy.jpg') no-repeat;
+    }
+
   body
 
     article
 
-      section(data-bespoke-backdrop='intro')
+      section
+        img.img--top(src='images/codeeurope.svg')
         h2 Strategies for modernising your stack, without going insane
 
         h3
           a(href='https://twitter.com/ferakpeter') @ferakpeter
         img.avatar(src='images/profile.png')
+        img.img--bottom(src='images/intro-bottom.png')
 
       section
         img.avatar.avatar(src='images/albert-einstein.jpg')
@@ -31,32 +57,183 @@ html
         p
           a(href='https://www.brainyquote.com/quotes/unknown_133991') Albert Einstein
 
-      section //(Fast change)
-        h2 PC, Web, mobile, ML, AI - we work in a very fast paced industry
+      section.dark
+        h1 We live in a time of tech evolution
 
-      section //(Dinosaures)
-        h2 And humans are very much creatures of habit
-
-      section
-        h2 The spectrum, leaving everything the same vs. adapting all the time
+      section.dark(data-bespoke-backdrop='fastchange')
+        h2 Change is constant
 
       section
-        h2 Agile Manifesto: “Continuous attention to technical excellence and good design enhances agility”
+        h2 During one lifetime
+        ul
+          li PC
+          li Web
+          li Mobile
+          li VR
+          li AI
+
+      section.dark(data-bespoke-backdrop='dinosaur')
+        h2 Humans are creatures of habit
+
+      section.dark(data-bespoke-backdrop='policies')
+        h2 Policies may slow down the technological progress
 
       section
-        h2 How do we find the correct balance for our company?
+        div
+          span.box Using the same stack over and over
+          span.box
+            img.img(src='images/scale.jpg')
+          span.box Jumping on something new all the time
 
       section
-        h1 Music?
+        h2 Agile Principle
+        p Continuous attention to technical excellence and good design enhances agility
+
+      //-- BUT it doesn't tell us about how to choose the right stack
+
+      section
+        h2 Finding a sustainable balance for a company?
+        ul
+          li Inspect and Adapt is not often used the tech stack
+          li Until it is too late
+          li Rewrites are hard to integrate in a big system
+
+      section
+        h2 Who do we turn to in those situations?
+
+      section.dark(data-bespoke-backdrop='guru')
+        h2 A tech leader can make the decision
+        p A guru can be hard to replace
+
+      section.dark(data-bespoke-backdrop='cloudy')
+        h2 There can be unclarity about who should take the decision
+        p Too much diversity in the stack can become unmaintainable
+
+      section.dark(data-bespoke-backdrop='deadline')
+        h2 The sales team can inflence the decision
+        p A deadline can force an optimization for short term benefit
+
+      section
+        h2 By the time a decision is made a rewrite of a part of the system may be necessary
+
+      section.dark
+        h1 Incremental adaption of new technologies
+
+      section
+        h2 Building small "Islands" into the system
+        ul
+          li Javascript application - export a ReasonML module
+          li API - move one resource to a new platform
+          li In the backend - extract a feature
+          li Validated learning
+          li Be ready to change it
+
+      section
+        h2 Establish or enhance communication channels
+        ul
+          li Internal meetups
+          li Show cases, benchmarks
+          li Make it easy to share things
+          li Create buzz "during" working hours
+          li Support early adopters
+
+      section
+        h2 Once something works for one team...
+
+      section
+        h2 Be relentless about common practices
+        ul
+          li How-tos and best practices must be communicated through all channels
+          li Pull Requests with strict rules
+          li Let marketing and design people work on adoption
+          li Plan this into the regular delivery cycle
+
+      section
+        h1 Creating a strategy
+
+      section
+        h2 S-curve
+
+      section
+        h2 Agile
+        ul
+          li Product
+          li Collaboration
+          li Development
+
+      section
+        h2 Tech strategy Pillars
+        ul
+          li Product
+          li Scale
+          li Technical process
+          li Skills
+          li Mass
+
+      section
+        h2 Product
+        p Geizhals vs. Snapchat
+
+      section
+        h2 Scale
+        p FB vs. Bwin
+
+      section
+        h2 Technical process
+        p "Blind coding" vs. continous delivery
+
+      section
+        h2 Skills
+        p What do poeple know and what do they want to know
+
+      section
+        h2 Graph about % achieved of each pillar
+        ul
+          li Innovation
+          li Market share
+          li Operation
+          li Training
+          li Recruitment
+
+      section
+        h1 Implementing the Strategy
+
+      section
+        table.vis
+          tr
+            td Measure
+            td Product
+            td Scale
+            td Technical process
+            td Skills
+            td Mass
+
+          tr
+            td Consultants
+            td
+            td.green
+            td.green
+            td.yellow
+            td
+            td
+
+
+
+
+
+
+
+
+
+
+
+
 
       section
         h2 Where are the similarities?
         ul
           li Fast paced, constantly changing
-          li Trends matter
-          li "Open-source"
           li Highly dependend on "hardware"
-          li Usually performed by groups of individuals with different skill-sets
 
       section
         img.img--full(src='images/music-styles.jpg')
@@ -66,11 +243,13 @@ html
         p Peter Van Roy
 
       section
+        h2 How do we choose the right technology for our team?
+
+      section
+        h2 Musical evolution
         ul
-          li Musical ideas spread through communities
-          li Communities influence each others
           li Changes are incremental and seemingly small
-          li But sometimes there are game-changers (paradigm-shifts)
+          li But sometimes there are paradigm-shifts
 
       section
         h2 The electric guitar changed everything
@@ -79,14 +258,18 @@ html
       section
         h2 Find the tools to identify Electric Guitars for your business!
 
+
+
+
+
+
+
       section
-
-
-
-      section(data-bespoke-backdrop='intro')
+        img.img--top(src='images/codeeurope.svg')
         h1 Thank you!
         h3
           a(href='https://twitter.com/ferakpeter') @ferakpeter
-        img.avatar.avatar--small(src='images/profile.png')
+        img.avatar.avatar(src='images/profile.png')
+        img.img--bottom(src='images/intro-bottom.png')
 
       script(src='build/build.js')

@@ -18,11 +18,11 @@ primary = #26de6f
 green = #26de6f
 blue = #1263cf
 
-slide_width = 640px
+slide_width = 800px
 slide_height = 480px
 slide_background = transparent
 
-slide_transition_length = .6s
+slide_transition_length = .4s
 slide_transition_easing = ease
 slide_transition_rotate_y = 20deg
 // Safari bugs out on 3d transform-origins, so we have to fake it
@@ -51,7 +51,7 @@ spacer_gif = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAAB
 // bespoke.js layout styles
 
 article
-  transition: all .3s ease
+  transition: all .2s ease
   display: none
   background: white
   &.bespoke-parent
@@ -68,7 +68,7 @@ article
       position: static
 
     &.dark
-      background: white
+      background: black
     &.red
       background: primary
     &.white
@@ -104,14 +104,8 @@ article
     page-break-before: always
     position: static
     margin: 0
-
-.bespoke-before
-  transform: translateX(slide_transition_nudge_x * -1) translateX(slide_width / -2) rotateY(slide_transition_rotate_y * -1) translateX(slide_width / -2)
-
-.bespoke-after
-  transform: translateX(slide_transition_nudge_x) translateX(slide_width / 2) rotateY(slide_transition_rotate_y) translateX(slide_width / 2)
-  @media print
-    transform: none
+  &.dark
+    background: rgba(18,99,207,0.7)
 
 .bespoke-inactive
   opacity: 0
@@ -275,6 +269,23 @@ a
     width: 600px
   &--full
     height: 80%
+  &--bottom
+    clear: both;
+    position: fixed;
+    bottom: 10px;
+    z-index: 10;
+    margin-top: -3em;
+    width: 100%;
+  &--top
+    clear: both;
+    position: fixed;
+    top: 10px;
+    margin-left: 10px;
+    z-index: 10;
+    margin-bottom: -3em;
+    width: 100px;
+    left: 0px;
+
 
 .avatar
   display: block
@@ -285,3 +296,19 @@ a
   &--small
     width: 70px
     height: 70px
+
+.box
+  margin: 5px
+  width: 30%
+
+.green
+  background-color: green
+
+.yellow
+  background-color: yellow
+
+.red
+  background-color: red
+
+.vis
+  border: 1px black
