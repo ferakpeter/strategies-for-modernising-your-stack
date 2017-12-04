@@ -40,6 +40,18 @@ html
       background: black url('images/lordoftherings.jpg') no-repeat;
     }
 
+    .watch {
+      background: black url('images/watch.jpg') no-repeat;
+    }
+
+    .meetup {
+      background: black url('images/meetup.jpg') no-repeat;
+    }
+
+    .coderetreat {
+      background: black url('images/coderetreat.jpg') no-repeat;
+    }
+
   body
 
     article
@@ -284,16 +296,23 @@ html
       section
         h2 Using the budget for smaller improvements targeted to your needs
 
-      section
+      section.dark(data-bespoke-backdrop='watch')
         h2 Experience products of competitors with development teams
 
-      section
+      section.dark(data-bespoke-backdrop='meetup')
         h2 Internal Meetups
 
       section
         h2 Hosting Meetup communities
+        table
+          td
+            img.avatar.avatar(src='images/react-vienna.jpg')
+          td
+            img.avatar.avatar(src='images/viennajs.jpg')
+          td
+            img.avatar.avatar(src='images/clojure-vienna.jpg')
 
-      section
+      section.dark(data-bespoke-backdrop='coderetreat')
         h2 Code Retreats
         p To define Style Guides, Coding Rules, Tooling
         p To try things out
@@ -315,6 +334,11 @@ html
 
       section
         h2 Kaggle competition
+        p Or the like
+
+      section
+        h2 ...
+        p My examples may not apply
 
       section
         h2 Combine measures for high effect
@@ -345,8 +369,8 @@ html
           li Recruitment
 
 
-      section
-        h1 How to get the right suggestions
+      section.dark
+        h1 Finding the right measures
 
       secion
         h2 Involve the right people
@@ -373,6 +397,10 @@ html
 
       section
         h2 Steer the strategy with quality information
+        ul
+          li Visualize
+          li Measure
+          li Collect valid feedback (defects, incidents)
 
       section
         h2 Track  % achieved of each pillar
@@ -382,6 +410,27 @@ html
           li Operation
           li Training
           li Recruitment
+
+      section.dark
+        h1 Communicating the strategy
+
+      section
+        h2 Clear message
+        p Use the help of marketing
+
+      section
+        h2 Utalize channels you already have
+        ul
+          li Roadmaps
+          li Townhalls
+          li Intranet
+          li Newsletters
+
+      section
+        h2 A physical place with latest news
+        p "Scrum room"
+
+
 
       section.dark
         h1 Summing up
