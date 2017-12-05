@@ -72,6 +72,26 @@ html
       background: white url('images/bigband.jpg') no-repeat;
     }
 
+    .islands {
+      background: white url('images/islands.jpg') no-repeat;
+    }
+
+    .cleanup {
+      background: white url('images/cleanup.jpg') no-repeat;
+    }
+
+    .communication {
+      background: white url('images/communication.jpg') no-repeat;
+    }
+
+    .scrumroom {
+      background: white url('images/scrumroom.jpg') no-repeat;
+    }
+
+    .mainsquare {
+      background: white url('images/mainsquare.jpg') no-repeat;
+    }
+
   body
 
     article
@@ -82,8 +102,47 @@ html
 
         h3
           a(href='https://twitter.com/ferakpeter') @ferakpeter
-        img.avatar(src='images/profile.png')
+        table
+          td
+            img.avatar--small(src='images/clojure-vienna.jpg')
+          td
+            img.avatar(src='images/profile.png')
+          td
+            img.avatar--small(src='images/react-vienna.jpg')
+        img.avatar--small(src='images/bwin.svg')
         img.img--bottom(src='images/intro-bottom.png')
+
+      section
+        img.avatar.avatar(src='images/steve-balmer.jpg')
+        br
+        blockquote.
+          <strong>Great companies</strong> in the way they work, start with <strong>great leaders</strong>.
+        p
+          a(href='https://en.wikipedia.org/wiki/Steve_Ballmer') Steve Balmer
+
+      section
+        h2 Early 2000's
+        pre
+          code.language-javascript.
+            while (pc) {
+              var weNeed = "Developers!";
+            }
+
+      section
+        h2 Late 2000's
+        pre
+          code.language-javascript.
+            while (web) {
+              var weNeed = "Web Developers!";
+            }
+
+      section
+        h2 Mid 2010's
+        pre
+          code.language-javascript.
+            if (mobile) {
+              var steveBalmer = "Good bye!";
+            }
 
       section
         img.avatar.avatar(src='images/albert-einstein.jpg')
@@ -128,11 +187,11 @@ html
       //-- BUT it doesn't tell us about how to choose the right stack
 
       section
-        h2 Finding a sustainable balance for a company?
+        h2 Finding a sustainable balance for your company?
         ul
           li Paradigm shifts can go under the radar
-          li Decision can be too late
           li Long running rewrites
+          li Important decision can be too late
 
       section
         h2 Who do we turn to in those situations?
@@ -153,47 +212,44 @@ html
         h2 By the time a decision is made the system may be at the limit
 
       section.dark(data-bespoke-backdrop='lordoftherings')
-        h2 Getting relevant information from the right people, on time, will lead to a better decision
+        h2 Getting relevant information from the right people - on time - will lead to better technology choices
 
       section.dark
         h1 Incremental adaption of new technologies
 
-      section
+      section.dark(data-bespoke-backdrop='islands')
         h2 Building small "Islands" into the system
-        ul
-          li Javascript application - export a ReasonML module
-          li API - move one resource to a new platform
-          li In the backend - extract a feature
-          li Validated learning
-          li Getting feedback about assumptions
+        p Validated learning
+        p Getting feedback about assumptions
 
-      section
-        h2 Establish or enhance communication channels
-        ul
-          li Internal meetups
-          li Show cases, benchmarks
-          li Sharing code must be easy and well defined
-          li Create a buzz
-          li Support early adopters
+      section.dark(data-bespoke-backdrop='cleanup')
+        h2 But don't forget to clean up
+        p Drop things if they don't bring the expected benefit
+        p Often we "overvalue" the investment
 
       section
         h2 Once something works for one team...
 
+      section.dark(data-bespoke-backdrop='communication')
+        h2 Establish or enhance communication channels
+        p Internal meetups
+        p Show cases, benchmarks
+        p Support early adopters
+
       section
         h2 Be relentless about common practices
         ul
-          li How-Tos and best practices must be communicated through all channels
-          li Pull Requests with strict rules
-          li Let marketing and design people work on adoption
-          li Plan this into the regular delivery cycle
-
-      section
-        h2 Management focus on communication
-        ul
           li Engineers have a different focus
-          li Engineers usually think about improving "their" part
           li It takes skills that are not "core" skill
           li It may not happen "naturally"
+
+      section
+        h2 Treat tech choices as first class citizens
+        ul
+          li How-Tos and best practices must be communicated through all channels
+          li Let marketing and design people work on adoption
+          li Plan this into the regular delivery cycle
+          li It doesn't come for "free"
 
       section
         h2 Discover big decisions through proven "experiments"
@@ -218,11 +274,11 @@ html
 
       section
         h2 It's necessary to understand how fast things are approaching
+        p But...
 
       section
-        h2 How do we find the right decision for a company?
-        p Too much of our own history
-        p Not enough information about the company
+        p Biased opinions?
+        p Lack of information about the company?
 
       section
         h2 Agile
@@ -264,10 +320,13 @@ html
         h2 Tech strategy Pillars
         ul
           li Product = Innovation
-          li Scale = Market share
+          li Scale = Market translated to technological scale
           li Technical process = Operations and tool support
           li Skills = Software Craft
           li Mass = Recruitment
+
+      section
+        h2 Once the categories are defined find a way how to measure them
 
       section
         img.img--med(src='images/strategy-pillars.jpg')
@@ -298,7 +357,7 @@ html
         h2 Evaluations/Bonuses
         p.amber Product
         p Scale
-        p Technical process
+        p.amber Technical process
         p.highlight Skills
         p.highlight Mass
 
@@ -316,8 +375,24 @@ html
       section.dark(data-bespoke-backdrop='watch')
         h2 Experience products of competitors with development teams
 
+      section.dark
+        h2 Product watch
+        p.highlight Product
+        p.amber Scale
+        p Technical process
+        p Skills
+        p Mass
+
       section.dark(data-bespoke-backdrop='meetup')
         h2 Internal Meetups
+
+      section.dark
+        h2 Meetups
+        p Product
+        p Scale
+        p.highlight Technical process
+        p.highlight Skills
+        p Mass
 
       section
         h2 Hosting Meetup communities
@@ -329,23 +404,63 @@ html
           td
             img.avatar.avatar(src='images/clojure-vienna.jpg')
 
+      section
+        h2 Community
+        p Product
+        p Scale
+        p Technical process
+        p.highlight Skills
+        p.highlight Mass
+
       section.dark(data-bespoke-backdrop='coderetreat')
         h2 Code Retreats
         p To define Style Guides, Coding Rules, Tooling
         p To try things out
         p To create benchmarks
 
+      section.dark
+        h2 Code Retreats
+        p Product
+        p Scale
+        p.highlight Technical process
+        p.highlight Skills
+        p Mass
+
       section.dark(data-bespoke-backdrop='beatles')
         h2 Real Customers using pre-launch software on-site
+
+      section.dark
+        h2 Customers
+        p Product
+        p Scale
+        p.highlight Technical process
+        p Skills
+        p Mass
 
       section.dark(data-bespoke-backdrop='fieldwork')
         h2 Field work
         p Direct feedback and implementation
 
+      section.dark
+        h2 Field work
+        p.highlight Product
+        p Scale
+        p Technical process
+        p Skills
+        p Mass
+
       section
         h2 Skill watch
         p Track and visualize skills
         img.img--small(src='images/spiderweb.jpg')
+
+      section
+        h2 Skill watch
+        p Product
+        p Scale
+        p Technical process
+        p.highlight Skills
+        p.highlight Mass
 
       section
         h2 Use new technology for internal tools
@@ -358,28 +473,36 @@ html
             td
               img.avatar.avatar(src='images/scala.jpg')
 
-      section.dark(data-bespoke-backdrop='kaggle')
-        h2 Kaggle competition
-        p Or the like
-
       section
-        h2 ...
-        p My examples may not apply
-
-      section
-        h2 Targeted experiments can be measured
-
-      section
-        h2 Hosting Meetups
+        h2 Internal innovation first
         p Product
         p Scale
         p.highlight Technical process
         p.highlight Skills
-        p.highlight Mass
+        p Mass
+
+      section.dark(data-bespoke-backdrop='kaggle')
+        h2 Kaggle competition
+        p Or the like
+
+      section.dark
+        h2 Competitions
+        p Product
+        p Scale
+        p Technical process
+        p.highlight Skills
+        p Mass
 
       section
         img.img--med(src='images/strategy-pillars-improved.jpg')
 
+      section
+        h2 Be pro-active
+        img.img--med(src='images/developer-boss.jpg')
+
+      section
+        h2 My examples may not be valid for you
+        p ...
 
       section.dark
         h1 Finding the right measures
@@ -393,7 +516,7 @@ html
 
       section
         h2 Scale
-        p Architects, Tech teams, Infrastructure
+        p Market researchers, Architects, Tech teams, Infrastructure
 
       section
         h2 Technical process
@@ -411,7 +534,7 @@ html
         h2 Steer the strategy with quality information
         ul
           li Visualize
-          li Measure
+          li Benchmark
           li Collect valid feedback (defects, incidents)
           li Look outward and inward
 
@@ -430,33 +553,34 @@ html
           li Intranet
           li Newsletters
 
-      section
+      section.dark(data-bespoke-backdrop='scrumroom')
         h2 A physical place with latest news
-        p "Scrum room", "Battle room"
+        p "Scrum room"
+        p "Battle room"
 
-      section
-        h2 Communicate frequently to keep up buzz
-        p Make it part of results and project updates
+      section.dark(data-bespoke-backdrop='mainsquare')
+        h2 "Mainsquare" buzz
+        p Frequent updates
+        p Part of work-life
 
       section
         h2 Include the "outside" view
-        p General industry updates and trends (ex: Thoughtworks)
+        p General industry updates and trends
+        img.img--small(src='images/tech-radar-languages.jpg')
 
       section
         h2 Define where your company is
-        p TODO: the 2 axis with sheperd, gold digger ...
+        img.img--small(src='images/companycategories.png')
+
+      section
+        h2 4 Categories
+        ul
+          li Shepherd
+          li Gold digger vs. Nomad
+          li Producer
 
       section.dark
         h1 Summing up
-
-      section
-        h2 Small steps before taking big steps
-
-      section
-        h2 Management needs to facilitate change actively
-
-      section
-        h2 Steer change with relevant information from relevant people
 
       section.dark(data-bespoke-backdrop='wardrobe')
         h2 The tech stack is like a wardrobe
