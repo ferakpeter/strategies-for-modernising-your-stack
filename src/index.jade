@@ -13,7 +13,7 @@ html
     }
 
     .fastchange {
-      background: white url('images/fastchange.jpg') no-repeat;
+      background: white url('images/changes.jpg') no-repeat;
     }
 
     .dinosaur {
@@ -21,7 +21,7 @@ html
     }
 
     .policies {
-      background: black url('images/policies.jpg') no-repeat;
+      background: white url('images/policies.jpg') no-repeat;
     }
 
     .guru {
@@ -50,6 +50,26 @@ html
 
     .coderetreat {
       background: black url('images/coderetreat.jpg') no-repeat;
+    }
+
+    .wardrobe {
+      background: black url('images/wardrobe.jpg') no-repeat;
+    }
+
+    .beatles {
+      background: black url('images/beatles-segway.jpg') no-repeat;
+    }
+
+    .fieldwork {
+      background: black url('images/fieldwork.jpg') no-repeat;
+    }
+
+    .kaggle {
+      background: white url('images/kaggle.jpg') no-repeat;
+    }
+
+    .bigband {
+      background: white url('images/bigband.jpg') no-repeat;
     }
 
   body
@@ -108,11 +128,6 @@ html
       //-- BUT it doesn't tell us about how to choose the right stack
 
       section
-        img.img--small(src='images/scurve.jpg')
-        p
-          a(href='https://en.wikipedia.org/wiki/The_Innovator%27s_Dilemma') Innovator's Dilemna
-
-      section
         h2 Finding a sustainable balance for a company?
         ul
           li Paradigm shifts can go under the radar
@@ -126,13 +141,13 @@ html
         h2 Internal or external tech expert
         p Biased, and might create a bottle-neck
 
-      section.dark(data-bespoke-backdrop='cloudy')
-        h2 There might be unclarity about who can take a big decision
-        p Too much diversity can lead to chaos
-
       section.dark(data-bespoke-backdrop='deadline')
         h2 The sales team can inflence the decision
         p A deadline can force an optimization for short term benefit
+
+      section.dark(data-bespoke-backdrop='cloudy')
+        h2 There might be unclarity about who can take a big decision
+        p Too much diversity can lead to chaos
 
       section
         h2 By the time a decision is made the system may be at the limit
@@ -205,6 +220,11 @@ html
         h2 It's necessary to understand how fast things are approaching
 
       section
+        h2 How do we find the right decision for a company?
+        p Too much of our own history
+        p Not enough information about the company
+
+      section
         h2 Agile
         ul
           li Product
@@ -241,23 +261,29 @@ html
         p Hiring (location) strategy vs. Educational (pipeline) strategy
 
       section
-        h2 Graph about % achieved of each pillar
+        h2 Tech strategy Pillars
         ul
-          li Innovation
-          li Market share
-          li Operation
-          li Training
-          li Recruitment
+          li Product = Innovation
+          li Scale = Market share
+          li Technical process = Operations and tool support
+          li Skills = Software Craft
+          li Mass = Recruitment
+
+      section
+        img.img--med(src='images/strategy-pillars.jpg')
 
       section.dark
         h1 Implementing the Strategy
+
+      section
+        p With traditional tools
 
       section
         h2 Tech Consultants
         p Product
         p.highlight Scale
         p.highlight Technical process
-        p Skills
+        p.amber Skills
         p Mass
 
       section
@@ -270,7 +296,7 @@ html
 
       section
         h2 Evaluations/Bonuses
-        p Product
+        p.amber Product
         p Scale
         p Technical process
         p.highlight Skills
@@ -285,16 +311,7 @@ html
         p.amber Mass
 
       section
-        h2 Needs   % achieved of each pillar
-        ul
-          li Innovation
-          li Market share
-          li Operation
-          li Training
-          li Recruitment
-
-      section
-        h2 Using the budget for smaller improvements targeted to your needs
+        p Using the budget for smaller targeted improvements
 
       section.dark(data-bespoke-backdrop='watch')
         h2 Experience products of competitors with development teams
@@ -318,21 +335,30 @@ html
         p To try things out
         p To create benchmarks
 
-      section
+      section.dark(data-bespoke-backdrop='beatles')
         h2 Real Customers using pre-launch software on-site
 
-      section
+      section.dark(data-bespoke-backdrop='fieldwork')
         h2 Field work
         p Direct feedback and implementation
 
       section
         h2 Skill watch
         p Track and visualize skills
+        img.img--small(src='images/spiderweb.jpg')
 
       section
         h2 Use new technology for internal tools
+        table
+          tr
+            td
+              img.avatar.avatar(src='images/java.jpg')
+            td
+              p =>
+            td
+              img.avatar.avatar(src='images/scala.jpg')
 
-      section
+      section.dark(data-bespoke-backdrop='kaggle')
         h2 Kaggle competition
         p Or the like
 
@@ -341,32 +367,18 @@ html
         p My examples may not apply
 
       section
-        h2 Combine measures for high effect
+        h2 Targeted experiments can be measured
 
       section
-        h2 Real Customers + Code Retreats
-        p.highlight Product
-        p.highlight Scale
-        p.amber Technical process
-        p.amber Skills
-        p Mass
-
-      section
-        h2 Field work + Code Retreats + Hosting Meetup
-        p.highlight Product
-        p.highlight Scale
+        h2 Hosting Meetups
+        p Product
+        p Scale
         p.highlight Technical process
         p.highlight Skills
         p.highlight Mass
 
       section
-        h2 Improved  % achieved of each pillar
-        ul
-          li Innovation
-          li Market share
-          li Operation
-          li Training
-          li Recruitment
+        img.img--med(src='images/strategy-pillars-improved.jpg')
 
 
       section.dark
@@ -401,15 +413,7 @@ html
           li Visualize
           li Measure
           li Collect valid feedback (defects, incidents)
-
-      section
-        h2 Track  % achieved of each pillar
-        ul
-          li Innovation
-          li Market share
-          li Operation
-          li Training
-          li Recruitment
+          li Look outward and inward
 
       section.dark
         h1 Communicating the strategy
@@ -428,9 +432,19 @@ html
 
       section
         h2 A physical place with latest news
-        p "Scrum room"
+        p "Scrum room", "Battle room"
 
+      section
+        h2 Communicate frequently to keep up buzz
+        p Make it part of results and project updates
 
+      section
+        h2 Include the "outside" view
+        p General industry updates and trends (ex: Thoughtworks)
+
+      section
+        h2 Define where your company is
+        p TODO: the 2 axis with sheperd, gold digger ...
 
       section.dark
         h1 Summing up
@@ -444,22 +458,21 @@ html
       section
         h2 Steer change with relevant information from relevant people
 
-      section
+      section.dark(data-bespoke-backdrop='wardrobe')
         h2 The tech stack is like a wardrobe
         p Make sure the system parts used most often are up to date with latest technologies
 
-      section
+      section.dark(data-bespoke-backdrop='bigband')
         h2 Musical evolution
-        ul
-          li Changes are incremental and seemingly small
-          li But sometimes there are paradigm-shifts
+        p Changes are incremental and seemingly small
+        p But sometimes there are paradigm-shifts
 
       section
         h2 The electric guitar changed everything
         img.img--med(src='images/electric-guitar.jpg')
 
       section
-        h2 Find the tools to identify the next big thing for your business!
+        h2 Find the tools for identifying the next big thing for your business
 
       section
         img.img--top(src='images/codeeurope.svg')
