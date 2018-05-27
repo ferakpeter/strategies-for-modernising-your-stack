@@ -12,6 +12,18 @@ html
       background: white url('images/intro-background.jpg') no-repeat;
     }
 
+    .resolvers {
+    background: white url('images/graphql-resolvers.png') no-repeat;
+    }
+
+    .montyhall {
+    background: white url('images/montyhall-problem.png') no-repeat;
+    }
+
+    .apolloMonitoring {
+    background: white url('images/apollo-monitoring.png') no-repeat;
+    }
+
     .fastchange {
       background: white url('images/changes.jpg') no-repeat;
     }
@@ -167,7 +179,7 @@ html
 
             type conference = {
               date: string,
-              where: city
+              location: city
             };
 
       section
@@ -234,317 +246,95 @@ html
         h2 GraphQL
 
       section
-        h2 DevOps
-        img.img--small(src='images/stack-devops.png')
-        a(href='https://stackshare.io/airbnb/airbnb') stackshare.io
-
-      section
-        h2 Productivity and Projectmanagement Tooling
-        img.img--small(src='images/stack-tools.png')
-        a(href='https://stackshare.io/airbnb/airbnb') stackshare.io
-
-      section
-        img.avatar.avatar(src='images/steve-balmer.jpg')
-        br
-        blockquote.
-          <strong>Great companies</strong> in the way they work, start with <strong>great leaders</strong>.
-        p
-          a(href='https://en.wikipedia.org/wiki/Steve_Ballmer') Steve Balmer
-
-      section
-        h2 Early 2000's
+        h2 Schemas
         pre
           code.language-javascript.
-            while (pc) {
-              var weNeed = "Developers!";
+            enum City {
+              Poznan,
+              Warsaw,
+              Other
+            }
+
+            type Conference {
+              id: ID
+              date: String
+              location: City
             }
 
       section
-        h2 Late 2000's
+        h2 Resolvers
         pre
           code.language-javascript.
-            while (web) {
-              var weNeed = "Web Developers!";
+            const ConferenceResolver = {
+              Query: {
+                  conferences: () => conferences,
+                  conference: getConferenceByLocation
+              },
+          };
+
+      section(data-bespoke-backdrop='resolvers')
+
+      section
+        h2 Queries, Mutations, Subscriptions
+        pre
+          code.language-javascript.
+            type Query {
+              conference(location: Poznan): Conference
+            }
+
+            type Mutation {
+              conference(date: "today", location: Poznan): Conference
+            }
+
+            type Subscription {
+              somethingChanged: {
+                subscribe: () => pubsub.asyncIterator(SOMETHING_CHANGED_TOPIC),
+              },
             }
 
       section
-        h2 Mid 2010's
+        h2 Apollo and Express Stack for NodeJS
         pre
           code.language-javascript.
-            if (mobile) {
-              var steveBalmer = "Good bye!";
-            }
+            import express from'express';
+            import bodyParser from 'body-parser';
+            import {graphqlExpress, graphiqlExpress} from 'apollo-server-express';
+
+            const app = express();
+
+            // The GraphQL endpoint
+            app.use('/graphql', cors(), bodyParser.json(), graphqlExpress({schema}));
+
+            // Start the server
+            app.listen(3100, () => {
+                console.log('Go to http://localhost:3100/graphiql to run queries!');
+
+      section(data-bespoke-backdrop='apolloMonitoring')
 
       section
-        img.avatar.avatar(src='images/albert-einstein.jpg')
-        br
-        blockquote.
-          Insanity: doing the same thing <strong>over and over</strong> again and <strong>expecting</strong> different results.
-        p
-          a(href='https://www.brainyquote.com/quotes/unknown_133991') Albert Einstein
-
-      section.dark
-        h1 We live in a time of tech evolution
-
-      section.dark(data-bespoke-backdrop='fastchange')
-        h2 Change is constant
+        h1 Both Technologies are early stage but established
 
       section
-        h2 During one lifetime
+        h2 Used by
+
+      section
+        h2 Migration Example
+
+      section
+        h2 Stack
         ul
-          li PC
-          li Web
-          li Mobile
-          li VR
-          li AI
-
-      section.dark(data-bespoke-backdrop='dinosaur')
-        h2 Humans are creatures of habit
-
-      section.dark(data-bespoke-backdrop='policies')
-        h2 Policies may slow down the technological progress
+          li MongoDB
+          li ActionHero
+          li React.js
 
       section
-        div
-          span.box Using the same stack over and over
-          span.box
-            img.img(src='images/scale.jpg')
-          span.box Jumping on something new all the time
-
-      section
-        h2 Agile Principle
-        p Continuous attention to technical excellence and good design enhances agility
-
-      //-- BUT it doesn't tell us about how to choose the right stack
-
-      section
-        h2 Finding a sustainable balance for your company?
+        h2 Target Stack
         ul
-          li Paradigm shifts can go under the radar
-          li Long running rewrites
-          li Important decision can be too late
+          li MongoDB
+          li GraphQL
+          li ReasonReact
 
-      section
-        h2 Backends
-        ul
-          li Monoliths
-          li Services
-          li Microservices
-          li Cloud services
-          li Lambda functions
-          li Microkernels
-
-      section
-        h2 Frontends
-        ul
-          li Serverside page lifecycles
-          li AJAX
-          li MVC (Ruby on Rails)
-          li MVC (Angular)
-          li jQuery
-          li Web Components
-          li Mini web applications that push state changes to each other
-
-      section
-        h2 Who do we turn to in those situations?
-
-      section.dark(data-bespoke-backdrop='guru')
-        h2 Internal or external tech expert
-        p Biased, and might create a bottle-neck
-
-      section.dark(data-bespoke-backdrop='deadline')
-        h2 The sales team can inflence the decision
-        p A deadline can force an optimization for short term benefit
-
-      section.dark(data-bespoke-backdrop='cloudy')
-        h2 There might be unclarity about who can take a big decision
-        p Too much diversity can lead to chaos
-
-      section
-        h2 By the time a decision is made the system may be at the limit
-
-      section.dark(data-bespoke-backdrop='lordoftherings')
-        h2 Getting relevant information from the right people - on time - will lead to better technology choices
-
-      section.dark
-        h1 Incremental adaption of new technologies
-
-      section.dark(data-bespoke-backdrop='islands')
-        h2 Building small "Islands" into the system
-        p Validated learning
-        p Getting feedback about assumptions
-
-      section.dark(data-bespoke-backdrop='cleanup')
-        h2 But don't forget to clean up
-        p Drop things if they don't bring the expected benefit
-        p Often we "overvalue" the investment
-
-      section
-        h2 Once something works for one team...
-
-      section.dark(data-bespoke-backdrop='communication')
-        h2 Establish or enhance communication channels
-        p Internal meetups
-        p Show cases, benchmarks
-        p Support early adopters
-
-      section
-        h2 Be relentless about common practices
-        ul
-          li Engineers have a different focus
-          li It takes skills that are not "core" skill
-          li It may not happen "naturally"
-
-      section
-        h2 Treat tech choices as first class citizens
-        ul
-          li How-Tos and best practices must be communicated through all channels
-          li Let marketing and design people work on adoption
-          li Plan this into the regular delivery cycle
-          li It doesn't come for "free"
-
-      section
-        h2 Discover big decisions through proven "experiments"
-
-      section.dark
-        h1 Creating a strategy
-
-      section
-        img.img--small(src='images/scurve.jpg')
-        p
-          a(href='https://en.wikipedia.org/wiki/The_Innovator%27s_Dilemma') Innovator's Dilemna
-
-      section
-        img.img--med(src='images/tech-radar-languages.jpg')
-        p
-          a(href='https://assets.thoughtworks.com/assets/technology-radar-vol-17-en.pdf') Thoughtworks Technology Radar
-
-      section
-        img.img--med(src='images/tech-radar-platforms.jpg')
-        p
-          a(href='https://assets.thoughtworks.com/assets/technology-radar-vol-17-en.pdf') Thoughtworks Technology Radar
-
-      section
-        h2 It's necessary to understand how fast things are approaching
-        p But...
-
-      section
-        p Biased opinions?
-        p Lack of information about the company?
-
-      section
-        h2 Agile
-        ul
-          li Product
-          li Collaboration
-          li Development
-
-      section
-        h2 Tech Strategy Pillars
-        ul
-          li Product
-          li Scale
-          li Technical process
-          li Skills
-          li Mass
-
-      section
-        h2 Product
-        p Geizhals vs. Snapchat
-
-      section
-        h2 Scale
-        p Bwin vs. Facebook
-
-      section
-        h2 Technical process
-        p "Blind coding" vs. Continous Delivery
-
-      section
-        h2 Skills
-        p What are business needs vs. What do people already know
-
-      section
-        h2 Mass
-        p Hiring (location) strategy vs. Educational (pipeline) strategy
-
-      section
-        h2 Tech strategy Pillars
-        ul
-          li Product = Innovation
-          li Scale = Market translated to technological scale
-          li Technical process = Operations and tool support
-          li Skills = Software Craft
-          li Mass = Recruitment
-
-      section
-        h2 Once the categories are defined find a way how to measure them
-
-      section
-        img.img--med(src='images/strategy-pillars.jpg')
-
-      section.dark
-        h1 Implementing the Strategy
-
-      section
-        p With traditional tools
-
-      section
-        h2 Tech Consultants
-        p Product
-        p.highlight Scale
-        p.highlight Technical process
-        p.amber Skills
-        p Mass
-
-      section
-        h2 Team Building
-        p Product
-        p Scale
-        p Technical process
-        p Skills
-        p.highlight Mass
-
-      section
-        h2 Evaluations/Bonuses
-        p.amber Product
-        p Scale
-        p.amber Technical process
-        p.highlight Skills
-        p.highlight Mass
-
-      section
-        h2 Outsourcing
-        p.negative Product
-        p.highlight Scale
-        p Technical process
-        p.negative Skills
-        p.amber Mass
-
-      section
-        p Using the budget for smaller targeted improvements
-
-      section.dark(data-bespoke-backdrop='watch')
-        h2 Experience products of competitors with development teams
-
-      section.dark
-        h2 Product watch
-        p.highlight Product
-        p.amber Scale
-        p Technical process
-        p Skills
-        p Mass
-
-      section.dark(data-bespoke-backdrop='meetup')
-        h2 Internal Meetups
-
-      section.dark
-        h2 Meetups
-        p Product
-        p Scale
-        p.highlight Technical process
-        p.highlight Skills
-        p Mass
+      section(data-bespoke-backdrop="montyhall")
 
       section
         h2 Hosting Meetup communities
@@ -555,200 +345,6 @@ html
             img.avatar.avatar(src='images/viennajs.jpg')
           td
             img.avatar.avatar(src='images/clojure-vienna.jpg')
-
-      section
-        h2 Community
-        p Product
-        p Scale
-        p Technical process
-        p.highlight Skills
-        p.highlight Mass
-
-      section.dark(data-bespoke-backdrop='coderetreat')
-        h2 Code Retreats
-        p To define Style Guides, Coding Rules, Tooling
-        p To try things out
-        p To create benchmarks
-
-      section.dark
-        h2 Code Retreats
-        p Product
-        p Scale
-        p.highlight Technical process
-        p.highlight Skills
-        p Mass
-
-      section.dark(data-bespoke-backdrop='beatles')
-        h2 Real Customers using pre-launch software on-site
-
-      section.dark
-        h2 Customers
-        p Product
-        p Scale
-        p.highlight Technical process
-        p Skills
-        p Mass
-
-      section.dark(data-bespoke-backdrop='fieldwork')
-        h2 Field work
-        p Direct feedback and implementation
-
-      section.dark
-        h2 Field work
-        p.highlight Product
-        p Scale
-        p Technical process
-        p Skills
-        p Mass
-
-      section
-        h2 Skill watch
-        p Track and visualize skills
-        img.img--small(src='images/spiderweb.jpg')
-
-      section
-        h2 Skill watch
-        p Product
-        p Scale
-        p Technical process
-        p.highlight Skills
-        p.highlight Mass
-
-      section
-        h2 Use new technology for internal tools
-        table
-          tr
-            td
-              img.avatar.avatar(src='images/java.jpg')
-            td
-              p =>
-            td
-              img.avatar.avatar(src='images/scala.jpg')
-
-      section
-        h2 Internal innovation first
-        p Product
-        p Scale
-        p.highlight Technical process
-        p.highlight Skills
-        p Mass
-
-      section.dark(data-bespoke-backdrop='kaggle')
-        h2 Kaggle competition
-        p Or the like
-
-      section.dark
-        h2 Competitions
-        p Product
-        p Scale
-        p Technical process
-        p.highlight Skills
-        p Mass
-
-      section
-        img.img--med(src='images/strategy-pillars-improved.jpg')
-
-      section
-        h2 Be pro-active
-        img.img--med(src='images/developer-boss.jpg')
-
-      section
-        h2 My examples may not be valid for you
-        p ...
-
-      section.dark
-        h1 Finding the right measures
-
-      secion
-        h2 Involve the right people
-
-      section
-        h2 Product
-        p Marketing, Product, Architects
-
-      section
-        h2 Scale
-        p Market researchers, Architects, Tech teams, Infrastructure
-
-      section
-        h2 Technical process
-        p Agile Coaches, Scrum Masters, Tech teams
-
-      section
-        h2 Skills
-        p Managers, Scrum Masters, Tech teams
-
-      section
-        h2 Mass
-        p Managers, HR, Tech teams
-
-      section
-        h2 Steer the strategy with quality information
-        ul
-          li Visualize
-          li Benchmark
-          li Collect valid feedback (defects, incidents)
-          li Look outward and inward
-
-      section.dark
-        h1 Communicating the strategy
-
-      section
-        h2 Clear message
-        p Use the help of marketing
-
-      section
-        h2 Utalize channels you already have
-        ul
-          li Roadmaps
-          li Townhalls
-          li Intranet
-          li Newsletters
-
-      section.dark(data-bespoke-backdrop='scrumroom')
-        h2 A physical place with latest news
-        p "Scrum room"
-        p "Battle room"
-
-      section.dark(data-bespoke-backdrop='mainsquare')
-        h2 "Mainsquare" buzz
-        p Frequent updates
-        p Part of work-life
-
-      section
-        h2 Include the "outside" view
-        p General industry updates and trends
-        img.img--small(src='images/tech-radar-languages.jpg')
-
-      section
-        h2 Define where your company is
-        img.img--small(src='images/companycategories.png')
-
-      section
-        h2 4 Categories
-        ul
-          li Shepherd
-          li Gold digger vs. Nomad
-          li Producer
-
-      section.dark
-        h1 Summing up
-
-      section.dark(data-bespoke-backdrop='wardrobe')
-        h2 The tech stack is like a wardrobe
-        p Make sure the system parts used most often are up to date with latest technologies
-
-      section.dark(data-bespoke-backdrop='bigband')
-        h2 Musical evolution
-        p Changes are incremental and seemingly small
-        p But sometimes there are paradigm-shifts
-
-      section
-        h2 The electric guitar changed everything
-        img.img--med(src='images/electric-guitar.jpg')
-
-      section
-        h2 Find the tools for identifying the next big thing for your business
 
       section
         img.img--top(src='images/codeeurope.svg')
