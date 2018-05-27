@@ -98,7 +98,7 @@ html
 
       section
         img.img--top(src='images/codeeurope.svg')
-        h2 Strategies for modernising your stack, without going insane
+        h2 Reason: You're not my type - but I still want to migrate
 
         h3
           a(href='https://twitter.com/ferakpeter') @ferakpeter
@@ -113,9 +113,125 @@ html
         img.img--bottom(src='images/intro-bottom.png')
 
       section
-        h2 Languages & Frameworks
-        img.img--small(src='images/stack-languages.png')
-        a(href='https://stackshare.io/airbnb/airbnb') stackshare.io
+        img.img--small(src='images/reason.svg')
+        br
+        h2 Value Proposition
+        ul
+          li Typesafety (like ELM)
+          li Advanced OOP and FP language Features
+          li Development Speed
+          li "opinionated React"
+          li Easy Javascript Interop
+          li Made by the makers of React
+
+      section
+        img.img(src='images/graphql.png')
+        br
+        h2 Value Proposition
+        ul
+          li Type Definitions, not endpoints
+          li (Graphs + Query Language)
+          li Query optimization
+          li Reduced payload
+
+      section
+        h2 Graphs
+        img.img--large(src='images/graph-db.png')
+
+      section
+        h1 Both Technologies come from Facebook
+
+      section
+        h2 The Reason Story
+
+      section
+        img.avatar.avatar(src='images/jordan-walke.jpg')
+        br
+        blockquote.
+          Reason is like <strong>ES2020</strong>
+
+      section
+        img.avatar.avatar(src='images/cheng-lou.jpg')
+        br
+        blockquote.
+          messenger.com is around <strong>50%</strong> converted to Reason
+
+      section
+        h2 Language Features
+
+      section
+        h2 Types and Variants
+        pre
+          code.language-javascript.
+            type city = Poznan | Warsaw | Other(string);
+
+            type conference = {
+              date: string,
+              where: city
+            };
+
+      section
+        h2 Functions And Pattern Matching
+        pre
+          code.language-javascript.
+            let greeting = city =>
+              switch (city) {
+              | Poznan => "Hello Poznan!"
+              | Warsaw => "Na zdrovie Warsaw."
+              | Other("Gdansk") => "Do you want to organize codeeurope?"
+              | Other(anyOtherName) => "Hey, " ++ anyOtherName ++ "."
+              };
+
+      section
+        h2 Records and Tuples
+        pre
+          code.language-javascript.
+            let poznan = { date: "June 12th 2018", city: Poznan };
+            let {date, city} = poznan;
+
+            let poznanTuple: (int, string) = ("June 12th 2018", Poznan);
+
+      section
+        h2 Lists and Arrays
+        pre
+          code.language-javascript.
+            let result = Js.(
+              [|1, 2, 3, 4|]
+              |> Array.filter(x => x > 2)
+              |> Array.mapi((x, i) => x + i)
+              |> Array.reduce((x, y) => x + y, 0)
+            )
+
+      section
+        h2 If, Else, and Loops
+        pre
+          code.language-javascript.
+            let message = if (isMorning) {
+              "Good morning!"
+            } else {
+              "Hello!"
+            };
+
+            for (x in a to b) {
+              print_int(x);
+            };
+
+      section
+        h2 Built in JSX in ReasonReact
+        pre
+          code.language-javascript.
+            < MyComponent foo={bar} / >
+
+      section
+        h2 Bucklescript compilation
+        img.img--medium(src='images/reasonml-architechture.png')
+
+      section
+        h2 Formatting and Compiling during development
+        img.img--medium(src='images/refmt.gif')
+
+      section
+        h2 GraphQL
 
       section
         h2 DevOps
